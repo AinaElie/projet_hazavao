@@ -19,7 +19,7 @@ public class TraductionChat {
     }
 
     public TraductionResponse response(String mot) {
-        String prompt = "Traduis ce mot en malgache: \"" + mot + "\"";
+        String prompt = "Traduis ce mot en malgache seulement: \"" + mot + "\"";
         String openApiKey = System.getenv("OPENAI_API_KEY");
         String traduction;
         String responseChat;
