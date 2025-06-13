@@ -18,7 +18,7 @@ public class TraductionChat {
         this.webClient = builder.baseUrl("https://api.openai.com").build();
     }
 
-    public TraductionResponse response(String mot) {
+    public String response(String mot) {
         String prompt = "Traduis ce mot en malgache seulement: \"" + mot + "\"";
         String openApiKey = System.getenv("OPENAI_API_KEY");
         String traduction;
@@ -57,6 +57,6 @@ public class TraductionChat {
             traduction = "Erreur lors du parsing de la réponse : " + e.getMessage();
         }
 
-        return new TraductionResponse(mot, traduction);
+        return traduction;
     }
 }

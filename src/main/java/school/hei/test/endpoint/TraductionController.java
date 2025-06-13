@@ -15,6 +15,6 @@ public class TraductionController {
     }
     @GetMapping("/hazavao")
     public String hazavao(@RequestParam String teny) {
-        return traductionService.traduire(teny).getResult();
+        return traductionService.traduire(teny);
     }
 }
