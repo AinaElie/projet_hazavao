@@ -7,12 +7,13 @@ import school.hei.test.repository.TraductionChat;
 @Getter
 @Service
 public class TraductionService {
-    private final TraductionChat traductionChat;
-    public TraductionService(TraductionChat traductionChat) {
-        this.traductionChat = traductionChat;
-    }
+  private final TraductionChat traductionChat;
 
-    public String traduire(String mot) {
-        return traductionChat.response(mot);
-    }
+  public TraductionService(TraductionChat traductionChat) {
+    this.traductionChat = traductionChat;
+  }
+
+  public String traduire(String mot) {
+    return traductionChat.response(mot);
+  }
 }
