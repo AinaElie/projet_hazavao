@@ -9,12 +9,14 @@ import school.hei.test.service.TraductionService;
 @Getter
 @RestController
 public class TraductionController {
-    private final TraductionService traductionService;
-    public TraductionController(TraductionService traductionService) {
-        this.traductionService = traductionService;
-    }
-    @GetMapping("/hazavao")
-    public String hazavao(@RequestParam String teny) {
-        return traductionService.traduire(teny).getResult();
-    }
+  private final TraductionService traductionService;
+
+  public TraductionController(TraductionService traductionService) {
+    this.traductionService = traductionService;
+  }
+
+  @GetMapping("/hazavao")
+  public String hazavao(@RequestParam String teny) {
+    return traductionService.traduire(teny);
+  }
 }
